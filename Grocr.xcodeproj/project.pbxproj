@@ -21,6 +21,9 @@
 		14A857DB196B476500901085 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A857BD196B476400901085 /* UIKit.framework */; };
 		14A857E3196B476500901085 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A857E1196B476500901085 /* InfoPlist.strings */; };
 		14A857E5196B476500901085 /* GrocrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A857E4196B476500901085 /* GrocrTests.m */; };
+		14A857F1196B573500901085 /* broccoli.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A857EE196B573500901085 /* broccoli.png */; };
+		14A857F2196B573500901085 /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A857EF196B573500901085 /* carrot.png */; };
+		14A857F3196B573500901085 /* dumpling.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A857F0196B573500901085 /* dumpling.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		14A857E0196B476500901085 /* GrocrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrocrTests-Info.plist"; sourceTree = "<group>"; };
 		14A857E2196B476500901085 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14A857E4196B476500901085 /* GrocrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrocrTests.m; sourceTree = "<group>"; };
+		14A857EE196B573500901085 /* broccoli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broccoli.png; sourceTree = "<group>"; };
+		14A857EF196B573500901085 /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrot.png; sourceTree = "<group>"; };
+		14A857F0196B573500901085 /* dumpling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dumpling.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,9 @@
 		14A857C0196B476400901085 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14A857EE196B573500901085 /* broccoli.png */,
+				14A857EF196B573500901085 /* carrot.png */,
+				14A857F0196B573500901085 /* dumpling.png */,
 				14A857C1196B476400901085 /* Grocr-Info.plist */,
 				14A857C2196B476400901085 /* InfoPlist.strings */,
 				14A857C5196B476400901085 /* main.m */,
@@ -228,9 +237,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A857F1196B573500901085 /* broccoli.png in Resources */,
 				14A857D2196B476400901085 /* Images.xcassets in Resources */,
 				14A857C4196B476400901085 /* InfoPlist.strings in Resources */,
+				14A857F2196B573500901085 /* carrot.png in Resources */,
 				14A857CD196B476400901085 /* Main.storyboard in Resources */,
+				14A857F3196B573500901085 /* dumpling.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

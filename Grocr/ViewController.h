@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    IBOutlet UIImageView *flashcardviewer;
+    NSArray* foods;
+    NSUInteger int_counter;
+}
+
+- (IBAction)buttonPressed;
 
 @end

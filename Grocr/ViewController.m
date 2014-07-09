@@ -58,8 +58,6 @@
                       nil];
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
     {
-        CGPoint labelPosition = CGPointMake(self.swipeLabel.frame.origin.x - 100.0, self.swipeLabel.frame.origin.y);
-        self.swipeLabel.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeLabel.frame.size.width, self.swipeLabel.frame.size.height);
         int_counter--;
         NSLog(@"%i",int_counter);
         if(int_counter >=0 && int_counter<=2){
@@ -71,8 +69,6 @@
     
     if (sender.direction == UISwipeGestureRecognizerDirectionRight)
     {
-        CGPoint labelPosition = CGPointMake(self.swipeLabel.frame.origin.x + 100.0, self.swipeLabel.frame.origin.y);
-        self.swipeLabel.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeLabel.frame.size.width, self.swipeLabel.frame.size.height);
         int_counter++;
         NSLog(@"%i",int_counter);
         if(int_counter >=0 && int_counter<=2){

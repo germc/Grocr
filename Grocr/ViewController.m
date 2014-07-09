@@ -11,13 +11,15 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *flashcardviewer;
-@property (strong, nonatomic) NSArray* foods;
+//@property (strong, nonatomic) NSArray* foods;
 @property (nonatomic) NSUInteger int_counter;
+@property (nonatomic, strong) UISwipeGestureRecognizer *leftSwipeGestureRecognizer;
+@property (nonatomic, strong) UISwipeGestureRecognizer *rightSwipeGestureRecognizer;
 
 @end
 
 @implementation ViewController
-@synthesize foods;
+//@synthesize foods;
 @synthesize flashcardviewer;
 @synthesize int_counter;
 
@@ -27,39 +29,56 @@
     
     // instantiate gesture recognizer
     
-    UISwipeGestureRecognizer * swiperight=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swiperight:)];
-    swiperight.direction=UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swiperight];
-    
-    UISwipeGestureRecognizer * swipeleft=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
-    swipeleft.direction=UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeleft];
+    self.leftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:)];
+    self.rightSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:)];
+    self.leftSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    self.rightSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:self.leftSwipeGestureRecognizer];
+    [self.view addGestureRecognizer:self.rightSwipeGestureRecognizer];
     
     //setup images
-    foods = [NSArray arrayWithObjects:
+    NSArray *foods = [NSArray arrayWithObjects:
                      [UIImage imageNamed:@"broccoli.png"],
                      [UIImage imageNamed:@"carrot.png"],
                      [UIImage imageNamed:@"dumpling.png"],
                      nil];
+    UIImage *image = foods[0];
+    [flashcardviewer setImage:image];
     
-    flashcardviewer = [[UIImageView alloc]init];
+//    flashcardviewer = [[UIImageView alloc]init];
 
 }
 
--(void)swipeleft:(UISwipeGestureRecognizer*)gestureRecognizer
+- (void)handleSwipes:(UISwipeGestureRecognizer *)sender
 {
-    //Do what you want here
-}
-
--(void)swiperight:(UISwipeGestureRecognizer*)gestureRecognizer
-{
-    //Avoid possible app crash with a if condition
-    if (int_counter < foods.count) {
-        UIImage *flashcard_next = [foods objectAtIndex:int_counter];
-        flashcardviewer.image = flashcard_next;
+    NSArray *foods = [NSArray arrayWithObjects:
+                      [UIImage imageNamed:@"broccoli.png"],
+                      [UIImage imageNamed:@"carrot.png"],
+                      [UIImage imageNamed:@"dumpling.png"],
+                      nil];
+    if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+        CGPoint labelPosition = CGPointMake(self.swipeLabel.frame.origin.x - 100.0, self.swipeLabel.frame.origin.y);
+        self.swipeLabel.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeLabel.frame.size.width, self.swipeLabel.frame.size.height);
+        int_counter--;
+        NSLog(@"%i",int_counter);
+        if(int_counter >=0 && int_counter<=2){
+            UIImage *image = foods[int_counter];
+            [flashcardviewer setImage:image];
+        }
+    }
+    
+    
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight)
+    {
+        CGPoint labelPosition = CGPointMake(self.swipeLabel.frame.origin.x + 100.0, self.swipeLabel.frame.origin.y);
+        self.swipeLabel.frame = CGRectMake( labelPosition.x , labelPosition.y , self.swipeLabel.frame.size.width, self.swipeLabel.frame.size.height);
         int_counter++;
-    } else {
-        NSLog (@"No more cards");
+        NSLog(@"%i",int_counter);
+        if(int_counter >=0 && int_counter<=2){
+            UIImage *image = foods[int_counter];
+            [flashcardviewer setImage:image];
+        }
     }
 }
 

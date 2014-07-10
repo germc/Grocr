@@ -29,6 +29,11 @@
 		14A857FB196E051D00901085 /* dialoguebubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A857FA196E051D00901085 /* dialoguebubble.png */; };
 		14A857FD196E05F900901085 /* bannerlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A857FC196E05F900901085 /* bannerlogo.png */; };
 		14A857FF196E065C00901085 /* bannerline.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A857FE196E065C00901085 /* bannerline.png */; };
+		14A85801196E104200901085 /* launchimage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A85800196E104200901085 /* launchimage1.png */; };
+		14A85805196E10C600901085 /* launchimage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A85804196E10C600901085 /* launchimage3.png */; };
+		14A85807196E17DC00901085 /* snapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A85806196E17DC00901085 /* snapshot.png */; };
+		14A8580A196E1E0F00901085 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A85808196E1E0F00901085 /* book.png */; };
+		14A8580B196E1E0F00901085 /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A85809196E1E0F00901085 /* people.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		14A857FA196E051D00901085 /* dialoguebubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialoguebubble.png; sourceTree = "<group>"; };
 		14A857FC196E05F900901085 /* bannerlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerlogo.png; sourceTree = "<group>"; };
 		14A857FE196E065C00901085 /* bannerline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerline.png; sourceTree = "<group>"; };
+		14A85800196E104200901085 /* launchimage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage1.png; sourceTree = "<group>"; };
+		14A85804196E10C600901085 /* launchimage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchimage3.png; sourceTree = "<group>"; };
+		14A85806196E17DC00901085 /* snapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snapshot.png; sourceTree = "<group>"; };
+		14A85808196E1E0F00901085 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		14A85809196E1E0F00901085 /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +152,11 @@
 		14A857C0196B476400901085 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14A85808196E1E0F00901085 /* book.png */,
+				14A85809196E1E0F00901085 /* people.png */,
+				14A85806196E17DC00901085 /* snapshot.png */,
+				14A85804196E10C600901085 /* launchimage3.png */,
+				14A85800196E104200901085 /* launchimage1.png */,
 				14A857F8196E045D00901085 /* gear.png */,
 				14A857FE196E065C00901085 /* bannerline.png */,
 				14A857FC196E05F900901085 /* bannerlogo.png */,
@@ -254,14 +269,19 @@
 			files = (
 				14A857FB196E051D00901085 /* dialoguebubble.png in Resources */,
 				14A857FF196E065C00901085 /* bannerline.png in Resources */,
+				14A8580B196E1E0F00901085 /* people.png in Resources */,
 				14A857F7196E017E00901085 /* controls.png in Resources */,
 				14A857FD196E05F900901085 /* bannerlogo.png in Resources */,
 				14A857F1196B573500901085 /* broccoli.png in Resources */,
 				14A857F9196E045D00901085 /* gear.png in Resources */,
 				14A857D2196B476400901085 /* Images.xcassets in Resources */,
+				14A85807196E17DC00901085 /* snapshot.png in Resources */,
 				14A857C4196B476400901085 /* InfoPlist.strings in Resources */,
+				14A85805196E10C600901085 /* launchimage3.png in Resources */,
 				14A857F2196B573500901085 /* carrot.png in Resources */,
+				14A8580A196E1E0F00901085 /* book.png in Resources */,
 				14A857CD196B476400901085 /* Main.storyboard in Resources */,
+				14A85801196E104200901085 /* launchimage1.png in Resources */,
 				14A857F3196B573500901085 /* dumpling.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +429,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grocr/Grocr-Prefix.pch";
 				INFOPLIST_FILE = "Grocr/Grocr-Info.plist";
@@ -422,7 +441,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grocr/Grocr-Prefix.pch";
 				INFOPLIST_FILE = "Grocr/Grocr-Info.plist";

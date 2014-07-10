@@ -15,6 +15,8 @@
 @property (nonatomic) NSUInteger int_counter;
 @property (nonatomic, strong) UISwipeGestureRecognizer *leftSwipeGestureRecognizer;
 @property (nonatomic, strong) UISwipeGestureRecognizer *rightSwipeGestureRecognizer;
+@property (weak, nonatomic) IBOutlet UITextView *foodname;
+@property (weak, nonatomic) IBOutlet UITextView *foodage;
 
 @end
 
@@ -22,6 +24,8 @@
 //@synthesize foods;
 @synthesize flashcardviewer;
 @synthesize int_counter;
+@synthesize foodname;
+@synthesize foodage;
 
 - (void)viewDidLoad
 {
@@ -42,8 +46,12 @@
                      [UIImage imageNamed:@"carrot.png"],
                      [UIImage imageNamed:@"dumpling.png"],
                      nil];
+    NSArray *foodnamelist = @[@"Broccoli", @"Carrot", @"Dumpling"];
     UIImage *image = foods[0];
     [flashcardviewer setImage:image];
+    foodname.text = foodnamelist[0];
+    NSInteger randomNumber = arc4random() % 18 + 20;
+    foodage.text = [NSString stringWithFormat:@"%i", randomNumber];
     
 //    flashcardviewer = [[UIImageView alloc]init];
 
@@ -56,24 +64,31 @@
                       [UIImage imageNamed:@"carrot.png"],
                       [UIImage imageNamed:@"dumpling.png"],
                       nil];
+    NSArray *foodnamelist = @[@"Broccoli", @"Carrot", @"Dumpling"];
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
-    {
-        int_counter--;
-        NSLog(@"%i",int_counter);
-        if(int_counter >=0 && int_counter<=2){
-            UIImage *image = foods[int_counter];
-            [flashcardviewer setImage:image];
-        }
-    }
-    
-    
-    if (sender.direction == UISwipeGestureRecognizerDirectionRight)
     {
         int_counter++;
         NSLog(@"%i",int_counter);
         if(int_counter >=0 && int_counter<=2){
             UIImage *image = foods[int_counter];
             [flashcardviewer setImage:image];
+            foodname.text = foodnamelist[int_counter];
+            NSInteger randomNumber = arc4random() % 18 + 20;
+            foodage.text = [NSString stringWithFormat:@"%i", randomNumber];
+        }
+    }
+    
+    
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight)
+    {
+        int_counter--;
+        NSLog(@"%i",int_counter);
+        if(int_counter >=0 && int_counter<=2){
+            UIImage *image = foods[int_counter];
+            [flashcardviewer setImage:image];
+            foodname.text = foodnamelist[int_counter];
+            NSInteger randomNumber = arc4random() % 18 + 20;
+            foodage.text = [NSString stringWithFormat:@"%i", randomNumber];
         }
     }
 }
